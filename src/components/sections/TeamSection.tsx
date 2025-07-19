@@ -4,37 +4,65 @@ import teamPhotoImage from '@/assets/team-photo.jpg'
 
 const teamMembers = [
   {
-    name: 'Alex Chen',
-    role: 'AI Research Lead',
-    bio: 'Specializing in deep learning and neural networks with 5+ years in AI research.',
+    name: 'Aditya Jadhav',
+    role: 'AI Robo Club Lead',
+    bio: 'Specializing in Machine learning, deep learning and neural networks with 2+ years in AI research.',
     avatar: '🤖',
     skills: ['Deep Learning', 'Computer Vision', 'Research']
   },
   {
-    name: 'Sarah Johnson',
-    role: 'Robotics Engineer',
-    bio: 'Expert in autonomous systems and robotic control with a passion for innovation.',
+    name: 'Sneha Jadhav',
+    role: 'AI Robo Club Co-lead',
+    bio: 'Expert in machine learning and robotic control with a passion for innovation.',
     avatar: '🔬',
-    skills: ['Robotics', 'Control Systems', 'SLAM']
+    skills: ['Data Analyst', 'Research' ]
   },
   {
-    name: 'Marcus Rodriguez',
-    role: 'Software Architect',
-    bio: 'Full-stack developer focused on AI integration and scalable system design.',
+    name: 'Prasad Dhokane',
+    role: 'Data Scientist ',
+    bio: 'Expert in Data Analyst and Machine Learning.',
     avatar: '💻',
-    skills: ['Software Architecture', 'AI Integration', 'Backend Systems']
+    skills: ['Machine Learning','Deep learning', 'AI Integration']
   },
   {
-    name: 'Emily Zhang',
-    role: 'Project Manager',
-    bio: 'Orchestrating innovation with agile methodologies and strategic planning.',
+    name: 'Ritesh Solke',
+    role: 'Web Developer',
+    bio: 'Full-stack developer focused on AI integration and scalable system design',
     avatar: '📊',
-    skills: ['Project Management', 'Strategy', 'Team Leadership']
-  }
+    skills: [ 'Full-Stack Developer', 'AI integration']
+  },
+    {
+    name: 'Virendrasinh Patil',
+    role: 'Gen AI Scientist ',
+    bio: 'Expert in ML, DL ,Lang-Chain, LLM and Transformers.',
+    avatar: '💻',
+    skills: ['Machine Learning','Deep learning', 'Gen AI']
+  },
+   {
+    name: 'Nilesh Dhole',
+    role: 'Gen Ai Scientist',
+    bio: 'Expert in machine learning, DL, Lang-Chain, LLM and Transformers. with a passion for innovation.',
+    avatar: '🔬',
+    skills: ['Data Analyst', 'Research','Gen AI' ]
+  },
+  {
+    name: 'Pratik Harke',
+    role: 'Cyber Security',
+    bio: 'Expert in Ethical Hacking and Ai Research.',
+    avatar: '💻',
+    skills: ['Cyber Security']
+  },
+  {
+    name: 'Ashwin Patil',
+    role: 'Web Developer',
+    bio: 'Full-stack developer focused on AI integration and scalable system design',
+    avatar: '📊',
+    skills: [ 'Full-Stack Developer', 'AI integration']
+  },
 ]
 
 const stats = [
-  { label: 'Active Members', value: '50+' },
+  { label: 'Active Members', value: '30+' },
   { label: 'Projects Completed', value: '25' },
   { label: 'Research Papers', value: '12' },
   { label: 'Innovation Awards', value: '8' }
