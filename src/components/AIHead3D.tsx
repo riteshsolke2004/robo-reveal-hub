@@ -1,11 +1,15 @@
 import { useRef, useState, Suspense } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
+import aiHeroImage from '@/assets/ai-hero.jpg'
 
 function FloatingHead() {
   const meshRef = useRef<THREE.Mesh>(null)
   const [hovered, setHovered] = useState(false)
+  
+  // Load AI texture
+  const texture = useLoader(THREE.TextureLoader, aiHeroImage)
 
   useFrame((state) => {
     if (meshRef.current) {
@@ -29,11 +33,11 @@ function FloatingHead() {
     >
       <sphereGeometry args={[1, 32, 32]} />
       <meshStandardMaterial
-        color="#00d4ff"
-        roughness={0.1}
-        metalness={0.8}
-        emissive="#0066cc"
-        emissiveIntensity={0.2}
+        map={texture}
+        roughness={0.2}
+        metalness={0.6}
+        emissive="#001133"
+        emissiveIntensity={0.3}
       />
     </mesh>
   )
