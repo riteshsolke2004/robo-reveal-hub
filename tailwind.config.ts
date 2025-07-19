@@ -61,7 +61,11 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// AI Theme Custom Colors
+				'neural-glow': 'hsl(var(--neural-glow))',
+				'hologram': 'hsl(var(--hologram))',
+				'cyber-mint': 'hsl(var(--cyber-mint))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -88,7 +92,22 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'neural-pulse': 'neural-pulse 3s ease-in-out infinite',
+				'particle-float': 'particle-float 8s linear infinite',
+				'hologram-scan': 'hologram-scan 3s linear infinite'
+			},
+			backgroundImage: {
+				'gradient-neural': 'var(--gradient-neural)',
+				'gradient-glow': 'var(--gradient-glow)',
+				'gradient-card': 'var(--gradient-card)'
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'neural': 'var(--shadow-neural)',
+				'hologram': 'var(--shadow-hologram)'
 			}
 		}
 	},

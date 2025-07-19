@@ -8,35 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Futuristic AI Theme - Deep Space */
+    --background: 220 40% 2%;
+    --foreground: 180 100% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 30% 5%;
+    --card-foreground: 180 100% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 30% 5%;
+    --popover-foreground: 180 100% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Electric Blue Primary */
+    --primary: 195 100% 60%;
+    --primary-foreground: 220 40% 2%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Deep Neural Secondary */
+    --secondary: 220 25% 10%;
+    --secondary-foreground: 180 100% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 20% 8%;
+    --muted-foreground: 180 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Neon Accent */
+    --accent: 280 100% 70%;
+    --accent-foreground: 220 40% 2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 20% 15%;
+    --input: 220 20% 8%;
+    --ring: 195 100% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom AI Theme Colors */
+    --neural-glow: 195 100% 60%;
+    --hologram: 280 100% 70%;
+    --cyber-mint: 160 100% 60%;
+    
+    /* Gradients */
+    --gradient-neural: linear-gradient(135deg, hsl(195 100% 60% / 0.1), hsl(280 100% 70% / 0.1));
+    --gradient-glow: linear-gradient(45deg, hsl(195 100% 60%), hsl(280 100% 70%));
+    --gradient-card: linear-gradient(145deg, hsl(220 30% 5% / 0.8), hsl(220 25% 10% / 0.6));
+    
+    /* Shadows & Effects */
+    --shadow-glow: 0 0 30px hsl(195 100% 60% / 0.3);
+    --shadow-neural: 0 10px 40px hsl(195 100% 60% / 0.1);
+    --shadow-hologram: 0 0 50px hsl(280 100% 70% / 0.4);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,8 +77,9 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Same colors for dark mode - AI theme is naturally dark */
+    --background: 220 40% 2%;
+    --foreground: 180 100% 95%;
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -101,5 +123,113 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.5);
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
+  }
+
+  /* Neural Network Animation */
+  .neural-bg {
+    background: 
+      radial-gradient(circle at 20% 50%, hsl(195 100% 60% / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(280 100% 70% / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(160 100% 60% / 0.02) 0%, transparent 50%);
+  }
+
+  /* Floating Animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotateY(0deg); }
+    50% { transform: translateY(-20px) rotateY(5deg); }
+  }
+
+  /* Glow Pulse */
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.4); }
+    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.8), 0 0 60px hsl(var(--primary) / 0.4); }
+  }
+
+  /* Neural Pulse */
+  @keyframes neural-pulse {
+    0% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.1); }
+    100% { opacity: 0.3; transform: scale(1); }
+  }
+
+  /* Particle Movement */
+  @keyframes particle-float {
+    0% { transform: translateY(0px) translateX(0px); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+  }
+
+  /* Hologram Effect */
+  .hologram-effect {
+    background: linear-gradient(45deg, transparent 30%, hsl(var(--primary) / 0.1) 50%, transparent 70%);
+    animation: hologram-scan 3s infinite;
+  }
+
+  @keyframes hologram-scan {
+    0% { background-position: -100% 0; }
+    100% { background-position: 100% 0; }
+  }
+
+  /* Glitch Text Effect */
+  .glitch-text {
+    position: relative;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .glitch-text::before {
+    animation: glitch-1 0.3s infinite;
+    color: hsl(var(--primary));
+    z-index: -1;
+  }
+
+  .glitch-text::after {
+    animation: glitch-2 0.3s infinite;
+    color: hsl(var(--accent));
+    z-index: -2;
+  }
+
+  @keyframes glitch-1 {
+    0%, 14%, 16%, 18%, 20%, 22%, 24%, 26%, 28%, 30%, 32%, 34%, 36%, 38%, 40%, 42%, 44%, 46%, 48%, 50%, 52%, 54%, 56%, 58%, 60%, 62%, 64%, 66%, 68%, 70%, 72%, 74%, 76%, 78%, 80%, 82%, 84%, 86%, 88%, 90%, 92%, 94%, 96%, 98%, 100% {
+      transform: translate(0);
+    }
+    15% { transform: translate(-2px, 0); }
+    17% { transform: translate(2px, 0); }
+  }
+
+  @keyframes glitch-2 {
+    0%, 20%, 22%, 24%, 26%, 28%, 30%, 32%, 34%, 36%, 38%, 40%, 42%, 44%, 46%, 48%, 50%, 52%, 54%, 56%, 58%, 60%, 62%, 64%, 66%, 68%, 70%, 72%, 74%, 76%, 78%, 80%, 82%, 84%, 86%, 88%, 90%, 92%, 94%, 96%, 98%, 100% {
+      transform: translate(0);
+    }
+    21% { transform: translate(-2px, 0); }
+    23% { transform: translate(2px, 0); }
   }
 }
