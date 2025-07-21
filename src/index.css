@@ -8,54 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Futuristic AI Theme - Deep Space */
-    --background: 220 40% 2%;
-    --foreground: 180 100% 95%;
+    /* Modern Blue & Purple Gradient Theme */
+    --background: 220 50% 96%;
+    --foreground: 230 15% 15%;
 
-    --card: 220 30% 5%;
-    --card-foreground: 180 100% 95%;
+    --card: 220 60% 98%;
+    --card-foreground: 230 15% 15%;
 
-    --popover: 220 30% 5%;
-    --popover-foreground: 180 100% 95%;
+    --popover: 220 60% 98%;
+    --popover-foreground: 230 15% 15%;
 
-    /* Electric Blue Primary */
-    --primary: 195 100% 60%;
-    --primary-foreground: 220 40% 2%;
+    /* Deep Ocean Blue Primary */
+    --primary: 220 90% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Deep Neural Secondary */
-    --secondary: 220 25% 10%;
-    --secondary-foreground: 180 100% 90%;
+    /* Soft Purple Secondary */
+    --secondary: 260 60% 92%;
+    --secondary-foreground: 260 25% 25%;
 
-    --muted: 220 20% 8%;
-    --muted-foreground: 180 20% 65%;
+    --muted: 220 40% 90%;
+    --muted-foreground: 220 10% 45%;
 
-    /* Neon Accent */
-    --accent: 280 100% 70%;
-    --accent-foreground: 220 40% 2%;
+    /* Vibrant Purple Accent */
+    --accent: 280 85% 65%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 20% 15%;
-    --input: 220 20% 8%;
-    --ring: 195 100% 60%;
+    --border: 220 30% 85%;
+    --input: 220 40% 95%;
+    --ring: 220 90% 50%;
 
     --radius: 0.75rem;
 
     /* Custom AI Theme Colors */
-    --neural-glow: 195 100% 60%;
-    --hologram: 280 100% 70%;
-    --cyber-mint: 160 100% 60%;
+    --neural-glow: 220 90% 50%;
+    --hologram: 280 85% 65%;
+    --cyber-mint: 180 75% 55%;
     
     /* Gradients */
-    --gradient-neural: linear-gradient(135deg, hsl(195 100% 60% / 0.1), hsl(280 100% 70% / 0.1));
-    --gradient-glow: linear-gradient(45deg, hsl(195 100% 60%), hsl(280 100% 70%));
-    --gradient-card: linear-gradient(145deg, hsl(220 30% 5% / 0.8), hsl(220 25% 10% / 0.6));
+    --gradient-neural: linear-gradient(135deg, hsl(220 90% 50% / 0.1), hsl(280 85% 65% / 0.1));
+    --gradient-glow: linear-gradient(45deg, hsl(220 90% 50%), hsl(280 85% 65%));
+    --gradient-card: linear-gradient(145deg, hsl(220 60% 98% / 0.9), hsl(260 60% 96% / 0.8));
     
     /* Shadows & Effects */
-    --shadow-glow: 0 0 30px hsl(195 100% 60% / 0.3);
-    --shadow-neural: 0 10px 40px hsl(195 100% 60% / 0.1);
-    --shadow-hologram: 0 0 50px hsl(280 100% 70% / 0.4);
+    --shadow-glow: 0 0 30px hsl(220 90% 50% / 0.3);
+    --shadow-neural: 0 10px 40px hsl(220 90% 50% / 0.1);
+    --shadow-hologram: 0 0 50px hsl(280 85% 65% / 0.4);
 
     --radius: 0.75rem;
 
@@ -148,9 +148,9 @@ All colors MUST be HSL.
   /* Neural Network Animation */
   .neural-bg {
     background: 
-      radial-gradient(circle at 20% 50%, hsl(195 100% 60% / 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(280 100% 70% / 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, hsl(160 100% 60% / 0.02) 0%, transparent 50%);
+      radial-gradient(circle at 20% 50%, hsl(220 90% 50% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(280 85% 65% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(180 75% 55% / 0.03) 0%, transparent 50%);
   }
 
   /* Floating Animation */
