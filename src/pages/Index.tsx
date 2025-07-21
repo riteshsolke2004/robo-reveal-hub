@@ -5,7 +5,6 @@ import ParticleBackground from '@/components/ParticleBackground'
 import HeroSection from '@/components/sections/HeroSection'
 import MissionSection from '@/components/sections/MissionSection'
 import ProjectsSection from '@/components/sections/ProjectsSection'
-import MentorSection from '@/components/sections/MentorSection'
 import TeamSection from '@/components/sections/TeamSection'
 import JoinSection from '@/components/sections/JoinSection'
 
@@ -38,7 +37,6 @@ const Index = () => {
               <a href="#hero" className="hover:text-primary transition-colors">Home</a>
               <a href="#mission" className="hover:text-primary transition-colors">Mission</a>
               <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
-              <a href="#mentors" className="hover:text-primary transition-colors">Mentors</a>
               <a href="#team" className="hover:text-primary transition-colors">Team</a>
               <a href="#join" className="hover:text-primary transition-colors">Join</a>
             </div>
@@ -52,7 +50,6 @@ const Index = () => {
       </div>
       <MissionSection />
       <ProjectsSection />
-      <MentorSection />
       <TeamSection />
       <JoinSection />
       
@@ -86,7 +83,6 @@ const Index = () => {
               <ul className="space-y-2 text-muted-foreground">
                 <li><a href="#mission" className="hover:text-primary transition-colors">Our Mission</a></li>
                 <li><a href="#projects" className="hover:text-primary transition-colors">Projects</a></li>
-                <li><a href="#mentors" className="hover:text-primary transition-colors">Mentors</a></li>
                 <li><a href="#team" className="hover:text-primary transition-colors">Team</a></li>
                 <li><a href="#join" className="hover:text-primary transition-colors">Join Us</a></li>
               </ul>
