@@ -9,44 +9,47 @@ gsap.registerPlugin(ScrollTrigger)
 const mentors = [
   {
     id: 1,
-    name: "Dr. Sarah Chen",
-    role: "Faculty Advisor",
-    department: "Computer Science",
+    name: "Dr. P.D. Lambhate",
+    role: "Head Of Department",
+    department: "Computer Engineering",
     expertise: ["Machine Learning", "Neural Networks", "Deep Learning"],
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
+    image: "",
     bio: "Leading researcher in artificial intelligence with 15+ years of experience in ML and robotics integration.",
     contact: "s.chen@university.edu"
   },
-  {
-    id: 2,
-    name: "Prof. Michael Rodriguez",
-    role: "Technical Mentor",
-    department: "Robotics Engineering",
-    expertise: ["Autonomous Systems", "Computer Vision", "Sensor Fusion"],
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    bio: "Industry veteran with expertise in autonomous robotics and real-world AI applications.",
-    contact: "m.rodriguez@university.edu"
-  },
+
   {
     id: 3,
-    name: "Dr. Emily Watson",
-    role: "Research Coordinator",
-    department: "AI Ethics & Policy",
-    expertise: ["AI Ethics", "Human-AI Interaction", "Policy Development"],
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+    name: "Prof. Minal Bade",
+    role: "Club Coordinator",
+    department: "Computer Engineering",
+    expertise: ["AI Ethics","ML"],
+    image: "",
     bio: "Pioneering work in responsible AI development and ethical considerations in robotics.",
     contact: "e.watson@university.edu"
   },
-  {
-    id: 4,
-    name: "Dr. James Liu",
-    role: "Innovation Lead",
-    department: "Mechanical Engineering",
-    expertise: ["Hardware Design", "Mechatronics", "3D Printing"],
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-    bio: "Expert in robotics hardware design and rapid prototyping for AI-driven mechanical systems.",
-    contact: "j.liu@university.edu"
-  }
+    {
+    id: 3,
+    name: "Mr. Tanish Devhare",
+    role: "Club Advisor",
+    department: "Computer Engineering",
+    expertise: ["Autonomous Systems", "Computer Vision", "AIML"],
+    image: "",
+    bio: "Industry veteran with expertise in autonomous robotics and real-world AI applications.",
+    contact: "taneshdevhare07@gmail.com"
+  },
+  
+
+  // {
+  //   id: 4,
+  //   name: "Dr. James Liu",
+  //   role: "Innovation Lead",
+  //   department: "Mechanical Engineering",
+  //   expertise: ["Hardware Design", "Mechatronics", "3D Printing"],
+  //   image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+  //   bio: "Expert in robotics hardware design and rapid prototyping for AI-driven mechanical systems.",
+  //   contact: "j.liu@university.edu"
+  // }
 ]
 
 const MentorSection = () => {

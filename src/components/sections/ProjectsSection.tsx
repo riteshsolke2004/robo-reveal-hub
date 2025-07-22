@@ -6,10 +6,10 @@ import aiHeroImage from '@/assets/ai-hero.jpg'
 
 const projects = [
   {
-    title: 'Neural Vision System',
-    description: 'Advanced computer vision system capable of real-time object detection, recognition, and tracking using deep learning models.',
+    title: 'Robotic Arm',
+    description: 'A programmable robotic arm that performs tasks like picking and placing objects using servo motors and sensors, controlled by Arduino. It demonstrates basic automation and robotics applications.',
     image: aiHeroImage,
-    tags: ['Computer Vision', 'Deep Learning', 'Real-time Processing'],
+    tags: ['Embedded System', 'Arduino', 'Real-time Processing'],
     status: 'Active Development',
     featured: true
   },
