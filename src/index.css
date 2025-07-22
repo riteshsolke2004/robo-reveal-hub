@@ -8,58 +8,63 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* AI Robotics Club Theme - Tech Matrix */
-    --background: 210 30% 8%;
-    --foreground: 180 100% 90%;
+    /* Futuristic Robotics Theme - Dark Base with Neon Accents */
+    --background: 220 40% 4%;
+    --foreground: 200 100% 95%;
 
-    --card: 210 40% 12%;
-    --card-foreground: 180 80% 85%;
+    --card: 220 30% 8%;
+    --card-foreground: 200 80% 90%;
 
-    --popover: 210 45% 10%;
-    --popover-foreground: 180 80% 85%;
+    --popover: 220 35% 6%;
+    --popover-foreground: 200 80% 90%;
 
-    /* Electric Cyan Primary */
-    --primary: 180 100% 50%;
-    --primary-foreground: 210 45% 8%;
+    /* Neon Cyan Primary */
+    --primary: 189 100% 60%;
+    --primary-foreground: 220 40% 4%;
 
-    /* Tech Steel Secondary */
-    --secondary: 210 20% 18%;
-    --secondary-foreground: 180 60% 75%;
+    /* Electric Blue Secondary */
+    --secondary: 230 50% 15%;
+    --secondary-foreground: 189 80% 75%;
 
-    --muted: 210 25% 15%;
-    --muted-foreground: 210 15% 55%;
+    --muted: 220 25% 12%;
+    --muted-foreground: 220 15% 60%;
 
-    /* Neon Green Accent */
-    --accent: 120 100% 45%;
-    --accent-foreground: 210 45% 8%;
+    /* Electric Purple Accent */
+    --accent: 270 100% 70%;
+    --accent-foreground: 220 40% 4%;
 
-    --destructive: 0 75% 55%;
-    --destructive-foreground: 180 80% 90%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 200 80% 90%;
 
-    --border: 210 30% 22%;
-    --input: 210 35% 14%;
-    --ring: 180 100% 50%;
+    --border: 220 30% 18%;
+    --input: 220 35% 10%;
+    --ring: 189 100% 60%;
 
     --radius: 0.75rem;
 
-    /* Custom AI Robotics Theme Colors */
-    --neural-glow: 180 100% 50%;
-    --circuit-green: 120 100% 45%;
-    --hologram-blue: 240 100% 60%;
-    --tech-orange: 25 100% 55%;
-    --matrix-cyan: 180 80% 60%;
+    /* Custom Robotics Theme Colors */
+    --neon-blue: 200 100% 60%;
+    --neon-cyan: 189 100% 60%;
+    --electric-purple: 270 100% 70%;
+    --robot-glow: 200 100% 55%;
+    --circuit-green: 120 100% 50%;
+    --data-orange: 25 100% 60%;
+    --hologram-pink: 320 100% 75%;
     
-    /* AI & Robotics Gradients */
-    --gradient-neural: linear-gradient(135deg, hsl(180 100% 50% / 0.15), hsl(120 100% 45% / 0.1));
-    --gradient-circuit: linear-gradient(45deg, hsl(180 100% 50%), hsl(240 100% 60%));
-    --gradient-matrix: linear-gradient(145deg, hsl(210 40% 12% / 0.95), hsl(180 30% 15% / 0.9));
-    --gradient-hologram: linear-gradient(90deg, hsl(180 100% 50% / 0.2), hsl(120 100% 45% / 0.2), hsl(240 100% 60% / 0.2));
+    /* Futuristic Robotics Gradients */
+    --gradient-neural: linear-gradient(135deg, hsl(189 100% 60% / 0.15), hsl(270 100% 70% / 0.1));
+    --gradient-circuit: linear-gradient(45deg, hsl(189 100% 60%), hsl(270 100% 70%));
+    --gradient-matrix: linear-gradient(145deg, hsl(220 30% 8% / 0.95), hsl(230 50% 15% / 0.9));
+    --gradient-hologram: linear-gradient(90deg, hsl(189 100% 60% / 0.2), hsl(270 100% 70% / 0.2), hsl(120 100% 50% / 0.15));
+    --gradient-card: linear-gradient(145deg, hsl(220 30% 8% / 0.4), hsl(230 50% 15% / 0.3));
+    --gradient-glow: linear-gradient(45deg, hsl(189 100% 60% / 0.8), hsl(270 100% 70% / 0.6));
     
-    /* Tech Effects & Shadows */
-    --shadow-cyber: 0 0 40px hsl(180 100% 50% / 0.4);
-    --shadow-circuit: 0 10px 50px hsl(120 100% 45% / 0.2);
-    --shadow-hologram: 0 0 60px hsl(240 100% 60% / 0.3);
-    --shadow-neural: 0 5px 30px hsl(180 80% 60% / 0.15);
+    /* Robotics Effects & Shadows */
+    --shadow-neon: 0 0 30px hsl(189 100% 60% / 0.5);
+    --shadow-purple: 0 0 40px hsl(270 100% 70% / 0.4);
+    --shadow-glow: 0 10px 50px hsl(189 100% 60% / 0.3);
+    --shadow-card: 0 8px 32px hsl(220 40% 4% / 0.5);
+    --shadow-tech: 0 0 20px hsl(120 100% 50% / 0.3);
 
     --radius: 0.75rem;
 
@@ -131,6 +136,21 @@ All colors MUST be HSL.
     overflow-x: hidden;
   }
 
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', 'Exo 2', monospace;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+  }
+
+  .tech-font {
+    font-family: 'Orbitron', 'Exo 2', monospace;
+  }
+
+  .body-font {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
   /* Scrollbar Styling */
   ::-webkit-scrollbar {
     width: 6px;
@@ -149,32 +169,95 @@ All colors MUST be HSL.
     background: hsl(var(--primary));
   }
 
-  /* AI Robotics Network Animation */
+  /* Futuristic Circuit Background */
   .neural-bg {
     background: 
-      radial-gradient(circle at 20% 50%, hsl(180 100% 50% / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(120 100% 45% / 0.06) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, hsl(240 100% 60% / 0.04) 0%, transparent 50%),
-      radial-gradient(circle at 60% 30%, hsl(25 100% 55% / 0.03) 0%, transparent 50%);
+      radial-gradient(circle at 20% 50%, hsl(189 100% 60% / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(270 100% 70% / 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(120 100% 50% / 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 60% 30%, hsl(25 100% 60% / 0.03) 0%, transparent 50%),
+      linear-gradient(0deg, transparent 24%, hsl(189 100% 60% / 0.02) 25%, hsl(189 100% 60% / 0.02) 26%, transparent 27%, transparent 74%, hsl(189 100% 60% / 0.02) 75%, hsl(189 100% 60% / 0.02) 76%, transparent 77%, transparent),
+      linear-gradient(90deg, transparent 24%, hsl(270 100% 70% / 0.02) 25%, hsl(270 100% 70% / 0.02) 26%, transparent 27%, transparent 74%, hsl(270 100% 70% / 0.02) 75%, hsl(270 100% 70% / 0.02) 76%, transparent 77%, transparent);
+    background-size: 75px 75px;
+    animation: circuit-pulse 8s ease-in-out infinite;
   }
 
-  /* Floating Animation */
+  @keyframes circuit-pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+  }
+
+  /* Glassmorphism Card */
+  .glass-card {
+    background: hsl(var(--card) / 0.4);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border) / 0.3);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Robotics Animations */
   @keyframes float {
     0%, 100% { transform: translateY(0px) rotateY(0deg); }
     50% { transform: translateY(-20px) rotateY(5deg); }
   }
 
-  /* Glow Pulse */
-  @keyframes glow-pulse {
-    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.4); }
-    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.8), 0 0 60px hsl(var(--primary) / 0.4); }
+  @keyframes robo-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+      transform: scale(1);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.8), 0 0 60px hsl(var(--accent) / 0.4);
+      transform: scale(1.02);
+    }
   }
 
-  /* Neural Pulse */
-  @keyframes neural-pulse {
-    0% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 0.8; transform: scale(1.1); }
-    100% { opacity: 0.3; transform: scale(1); }
+  @keyframes data-scan {
+    0% { transform: translateX(-100%); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(100%); opacity: 0; }
+  }
+
+  @keyframes mechanical-click {
+    0% { transform: scale(1) rotateZ(0deg); }
+    25% { transform: scale(0.95) rotateZ(-1deg); }
+    50% { transform: scale(1.05) rotateZ(1deg); }
+    100% { transform: scale(1) rotateZ(0deg); }
+  }
+
+  @keyframes blink-lights {
+    0%, 50% { opacity: 1; }
+    25%, 75% { opacity: 0.3; }
+  }
+
+  /* Interactive Robot Hover Effects */
+  .robot-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .robot-hover:hover {
+    animation: robo-glow 2s ease-in-out infinite;
+    transform: translateY(-4px);
+  }
+
+  .robot-click:active {
+    animation: mechanical-click 0.2s ease-out;
+  }
+
+  .data-scanner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.4), transparent);
+    animation: data-scan 3s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .blinking-lights {
+    animation: blink-lights 2s ease-in-out infinite;
   }
 
   /* Particle Movement */
