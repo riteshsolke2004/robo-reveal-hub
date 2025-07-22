@@ -5,6 +5,8 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Mail, MessageSquare, Rocket, Users, ArrowRight } from 'lucide-react'
 
+
+
 const benefits = [
   {
     icon: Users,
@@ -43,11 +45,31 @@ export default function JoinSection() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted:', formData)
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+
+  try {
+    const response = await fetch("http://localhost:8000/join/join-form", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    })
+
+    if (response.ok) {
+      alert("Form submitted successfully!")
+      setFormData({ name: "", email: "", experience: "", message: "" })
+    } else {
+      const result = await response.json()
+      alert("Submission failed: " + result.detail)
+    }
+  } catch (error) {
+    console.error("Error submitting form:", error)
+    alert("Server error. Please try again later.")
   }
+}
+
 
   return (
     <section id="join" className="py-20 relative overflow-hidden">
@@ -110,7 +132,7 @@ export default function JoinSection() {
                   their latest projects and research findings.
                 </p>
                 <Button variant="hologram" size="sm">
-                  Reserve Your Spot
+                  <a href="#join" className="hover:text-primary transition-colors">Reserve Your Spot</a>
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </div>

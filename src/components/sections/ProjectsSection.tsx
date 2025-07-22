@@ -6,27 +6,43 @@ import aiHeroImage from '@/assets/ai-hero.jpg'
 
 const projects = [
   {
-    title: 'Robotic Arm',
-    description: 'A programmable robotic arm that performs tasks like picking and placing objects using servo motors and sensors, controlled by Arduino. It demonstrates basic automation and robotics applications.',
+    title: 'Smart Attendance System',
+    description: 'The Smart Attendance System is an AI-powered application that automates attendance marking using real-time face recognition through webcams and mobile cameras. It is designed for educational institutions and organizations to ensure accurate, contactless, and tamper-proof attendance logging.',
     image: aiHeroImage,
-    tags: ['Embedded System', 'Arduino', 'Real-time Processing'],
+    tags: ['OpenCV', 'Face Recognization', 'Real-time Processing'],
     status: 'Active Development',
     featured: true
   },
   {
-    title: 'Autonomous Navigation Bot',
-    description: 'Self-driving robot that uses SLAM algorithms and sensor fusion to navigate complex environments autonomously.',
+    title: 'Sentiment Analysis',
+    description: 'The Sentiment Analysis project is an AI-powered system that automatically detects the emotional tone behind text data. It classifies input text (such as product reviews, social media comments, or customer feedback) into categories like positive, negative, or neutral using Natural Language Processing (NLP) techniques.',
     image: roboticsLabImage,
-    tags: ['SLAM', 'Sensor Fusion', 'Path Planning'],
+    tags: ['Data Scraping', 'LLM', 'Transformer'],
     status: 'Beta Testing',
     featured: true
   },
   {
-    title: 'AI Conversation Engine',
-    description: 'Natural language processing system that enables robots to understand and respond to human speech with context awareness.',
+    title: 'Computer Vision Robotic Arm',
+    description: 'An intelligent robotic arm that uses a camera and AI to detect objects and perform tasks like picking and placing based on real-time image processing.',
     image: aiHeroImage,
-    tags: ['NLP', 'Speech Recognition', 'Context AI'],
+    tags: ['Robotics', 'Kinematics', 'Control Systems'],
     status: 'Research Phase',
+    featured: false
+  },
+  {
+    title: 'Robotic Arm Controller',
+    description: 'Precision control system for robotic arms with inverse kinematics and machine learning-based optimization.',
+    image: roboticsLabImage,
+    tags: ['Robotics', 'Kinematics', 'Control Systems'],
+    status: 'Completed',
+    featured: false
+  },
+    {
+    title: 'Robotic Arm Controller',
+    description: 'Precision control system for robotic arms with inverse kinematics and machine learning-based optimization.',
+    image: roboticsLabImage,
+    tags: ['Robotics', 'Kinematics', 'Control Systems'],
+    status: 'Completed',
     featured: false
   },
   {
@@ -173,7 +189,7 @@ export default function ProjectsSection() {
                   </Button>
                   <Button variant="ghost" size="sm" className="flex-1">
                     <ExternalLink className="h-3 w-3 mr-1" />
-                    Learn More
+                    <a href = 'https://en.wikipedia.org/wiki/Robotic_arm'>Learn More</a>
                   </Button>
                 </div>
               </div>
@@ -183,7 +199,7 @@ export default function ProjectsSection() {
         
         <ScrollReveal animation="fadeUp" delay={1.2} className="text-center mt-12">
           <Button variant="neural" size="lg">
-            View All Projects
+            <a href="#projects" className="hover:text-primary transition-colors">View All Projects</a>
             <ExternalLink className="h-5 w-5 ml-2" />
           </Button>
         </ScrollReveal>

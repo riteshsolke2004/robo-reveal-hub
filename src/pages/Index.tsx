@@ -95,16 +95,17 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>ai-robotics@university.edu</li>
-                <li>Building 42, Room 101</li>
-                <li>University Campus</li>
-                <li>+1 (555) 123-4567</li>
+                <li><a href = "ai.club.jscoe@gmail.com">ai.club.jscoe@gmail.com</a></li>
+                <li>JSPM'S JSCOE Hadapsar</li>
+                <li>Pune, 411028</li>
+                <li>+91 98507 11406 , 87999 93086</li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-border/50 mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 AI Robotics Club. Crafted with 💙 for the future of technology.</p>
+            <p>2025 &copy;  AI Robotics Club. All Rights Reserved.
+.</p>
           </div>
         </div>
       </footer>
