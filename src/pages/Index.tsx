@@ -59,7 +59,7 @@ const Index = () => {
       <MissionSection />
       <ProjectsSection />
       <MentorSection />
-      <TeamSection />
+      <TeamSection limit={8} />
       <ResourcesSection />
       <AlumniSection />
       <GallerySection />
@@ -68,7 +68,8 @@ const Index = () => {
       {/* Footer */}
       <footer className="relative z-10 bg-gradient-card backdrop-blur-sm border-t border-border/50 py-12">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+          {/* --- Footer Grid Updated --- */}
+          <div className="grid md:grid-cols-5 gap-8">
             <div className="col-span-2">
               <h3 className="text-2xl font-bold mb-4">
                 <span className="text-primary">AI</span> Robotics Club
@@ -90,13 +91,21 @@ const Index = () => {
               </div>
             </div>
             
+            {/* --- Quick Links List 1 --- */}
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li><a href="#mission" className="hover:text-primary transition-colors">Our Mission</a></li>
                 <li><a href="#projects" className="hover:text-primary transition-colors">Projects</a></li>
                 <li><a href="#mentors" className="hover:text-primary transition-colors">Mentors</a></li>
-                <li><a href="#team" className="hover:text-primary transition-colors">Team</a></li>
+                <li><a href="/team" className="hover:text-primary transition-colors">Team</a></li>
+              </ul>
+            </div>
+
+            {/* --- Quick Links List 2 --- */}
+            <div>
+              <h4 className="font-semibold mb-4">Explore</h4>
+              <ul className="space-y-2 text-muted-foreground">
                 <li><a href="#resources" className="hover:text-primary transition-colors">Resources</a></li>
                 <li><a href="#alumni" className="hover:text-primary transition-colors">Alumni</a></li>
                 <li><a href="#gallery" className="hover:text-primary transition-colors">Gallery</a></li>
@@ -104,10 +113,11 @@ const Index = () => {
               </ul>
             </div>
             
+            {/* --- Contact Info --- */}
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li><a href = "ai.club.jscoe@gmail.com">ai.club.jscoe@gmail.com</a></li>
+                <li><a href = "mailto:ai.club.jscoe@gmail.com">ai.club.jscoe@gmail.com</a></li>
                 <li>JSPM'S JSCOE Hadapsar</li>
                 <li>Pune, 411028</li>
                 <li>+91 98507 11406 , 87999 93086</li>
@@ -116,8 +126,7 @@ const Index = () => {
           </div>
           
           <div className="border-t border-border/50 mt-8 pt-8 text-center text-muted-foreground">
-            <p>2025 &copy;  AI Robotics Club. All Rights Reserved.
-.</p>
+            <p>2025 &copy;  AI Robotics Club. All Rights Reserved.</p>
           </div>
         </div>
       </footer>

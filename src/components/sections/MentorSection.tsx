@@ -5,9 +5,10 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 
 // 1. Import your mentor images here
-// import mentor1 from '@/assets/mentor-1.jpg'; // Replace with your actual image file
-// import mentor2 from '@/assets/mentor-2.jpg'; // Replace with your actual image file
-// import mentor3 from '@/assets/mentor-3.jpg'; // Replace with your actual image file
+import mentor1 from '@/assets/mentor-1.jpg'; // Replace with your actual image file
+import mentor2 from '@/assets/mentor-2.jpg'; // Replace with your actual image file
+import mentor3 from '@/assets/mentor-3.jpg'; // Replace with your actual image file
+import mentor4 from '@/assets/mentor-4.jpg'; // Replace with your actual image file
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -19,7 +20,7 @@ const mentors = [
     role: "Head Of Department",
     department: "Computer Engineering",
     expertise: ["Machine Learning", "Neural Networks", "Deep Learning"],
-    //image: mentor1, // 2. Use the imported image
+    //image: mentor1,
     bio: "Leading researcher in artificial intelligence with 15+ years of experience in ML and robotics integration.",
     contact: "s.chen@university.edu"
   },
@@ -30,18 +31,18 @@ const mentors = [
     role: "Club Coordinator",
     department: "Computer Engineering",
     expertise: ["AI Ethics","ML"],
-   // image: mentor2, // 2. Use the imported image
+    //image: mentor2,
     bio: "Pioneering work in responsible AI development and ethical considerations in robotics.",
     contact: "e.watson@university.edu"
   },
     {
     id: 3,
-    name: "Mr. Tanish Devhare",
+    name: "Mr. Tanesh Devhare",
     role: "Club Advisor",
     department: "Computer Engineering",
-    expertise: ["Autonomous Systems", "Computer Vision", "AIML"],
-   // image: mentor3, // 2. Use the imported image
-    bio: "Industry veteran with expertise in autonomous robotics and real-world AI applications.",
+    expertise: ["AIML", "Quantum Computing", "Space Science","Entrepreneurship"],
+    image: mentor3,
+    bio: "AIML Specialist | Space Science & Quantum Tech Enthusiast | Tech Entrepreneur | Driving Innovation Across Intelligence, Cosmos, and Computation. Startup - 'CADAIUS INNOVATIONS PVT LTD'",
     contact: "taneshdevhare07@gmail.com"
   },
     {
@@ -49,9 +50,9 @@ const mentors = [
     name: "Mr. Avishkar Bhusare",
     role: "Club Advisor",
     department: "Computer Engineering",
-    expertise: ["Data Analyst","Machine learning"],
-    image: "",
-    bio: "Expert in robotics hardware design and rapid prototyping for AI-driven mechanical systems.",
+    expertise: ["Data Science","Machine learning"],
+    image: mentor4,
+    bio: "Knowledge in machine Learning and Data Science, with Hands on Project Experience.",
     contact: "avishkarbhusare@gmail.com"
   }
 ]
@@ -176,7 +177,8 @@ const MentorSection = () => {
             >
               <CardContent className="p-6">
                 <div className="relative mb-6">
-                  <div className="w-24 h-24 mx-auto mb-4 relative">
+                  {/* --- Image size updated here --- */}
+                  <div className="w-32 h-32 mx-auto mb-4 relative">
                     <img 
                       src={mentor.image} 
                       alt={mentor.name}

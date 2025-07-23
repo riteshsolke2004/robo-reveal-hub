@@ -1,58 +1,63 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ScrollReveal from '@/components/ScrollReveal';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Plus } from 'lucide-react';
-import teamPhotoImage from '@/assets/team-photo.jpg';
-import roboticsLabImage from '@/assets/robotics-lab.jpg';
-import aiHeroImage from '@/assets/ai-hero.jpg';
-import neuralNetworkImage from '@/assets/neural-network.jpg';
-
-const initialImages = [
-  {
-    src: teamPhotoImage,
-    alt: 'Team working on a project',
-    title: 'Collaborative Session',
-  },
-  {
-    src: roboticsLabImage,
-    alt: 'Robotics lab with advanced equipment',
-    title: 'Our Innovation Lab',
-  },
-  {
-    src: aiHeroImage,
-    alt: 'AI powered robot',
-    title: 'AI Hero',
-  },
-  {
-    src: neuralNetworkImage,
-    alt: 'Neural network visualization',
-    title: 'Neural Network Research',
-  },
-];
 
 export default function GallerySection() {
   const [open, setOpen] = useState(false);
-  const [images, setImages] = useState(initialImages);
-  const [formData, setFormData] = useState({
-    title: '',
-    imageUrl: '',
-  });
+  const [images, setImages] = useState([]);
+  const [title, setTitle] = useState('');
+  const [file, setFile] = useState<File | null>(null); // State to hold the selected file
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/gallery/images');
+        const data = await response.json();
+        setImages(data);
+      } catch (error) {
+        console.error("Failed to fetch images:", error);
+      }
+    };
+    fetchImages();
+  }, []);
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      setFile(e.target.files[0]); // Store the selected file
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (formData.imageUrl && formData.title) {
-      setImages(prev => [...prev, { src: formData.imageUrl, alt: formData.title, title: formData.title }]);
-      setFormData({ title: '', imageUrl: '' });
-      setOpen(false); // Close the modal on submit
+    if (file && title) {
+      const formData = new FormData(); // Use FormData for file uploads
+      formData.append('title', title);
+      formData.append('file', file);
+
+      try {
+        const response = await fetch('http://localhost:8000/gallery/add-image', {
+          method: 'POST',
+          body: formData, // Send FormData instead of JSON
+        });
+
+        if (response.ok) {
+          const newImage = await response.json();
+          setImages(prev => [
+            { src: newImage.data.imageUrl, alt: newImage.data.title, title: newImage.data.title },
+            ...prev
+          ]);
+          setTitle('');
+          setFile(null);
+          setOpen(false);
+        } else {
+          console.error("Failed to add image");
+        }
+      } catch (error) {
+        console.error("Error submitting image:", error);
+      }
     }
   };
 
@@ -84,11 +89,12 @@ export default function GallerySection() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="title" className="block text-sm font-medium mb-1">Image Title</label>
-                  <Input id="title" name="title" value={formData.title} onChange={handleInputChange} required />
+                  <Input id="title" name="title" value={title} onChange={(e) => setTitle(e.target.value)} required />
                 </div>
                 <div>
-                  <label htmlFor="imageUrl" className="block text-sm font-medium mb-1">Image URL</label>
-                  <Input id="imageUrl" name="imageUrl" type="url" value={formData.imageUrl} onChange={handleInputChange} required />
+                  <label htmlFor="file" className="block text-sm font-medium mb-1">Image File</label>
+                  {/* Changed input type to "file" */}
+                  <Input id="file" name="file" type="file" onChange={handleFileChange} required />
                 </div>
                 <Button type="submit">Add to Gallery</Button>
               </form>

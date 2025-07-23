@@ -41,11 +41,19 @@ export default function MissionSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         <ScrollReveal animation="fadeUp" className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Our <span className="text-primary">Mission</span>
+            Our <span className="text-primary">Vision & Mission</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Aligned with the Department of Computer Engineering's vision to serve society, our mission is to develop computer professionals by providing quality education and assimilating academic, research, and entrepreneurship skills to accomplish real-world challenges in AI and robotics.
-          </p>
+          {/* --- Updated Vision and Mission Text --- */}
+          <div className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="font-bold text-primary mb-4">Vision</p>
+            <p className="mb-6">
+              To emerge as a center of excellence in AI Robotics by fostering innovation, interdisciplinary learning, and industry-relevant skills to solve real-world problems.
+            </p>
+            <p className="font-bold text-primary mb-4">Mission</p>
+            <p>
+              To encourage research, innovation, intellectual learning and collaboration through quality projects by hands-on learning.
+            </p>
+          </div>
         </ScrollReveal>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

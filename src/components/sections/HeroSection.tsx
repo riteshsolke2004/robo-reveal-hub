@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { Button } from '@/components/ui/button'
-import AIHead3D from '@/components/AIHead3D'
+import HeroCarousel3D from '@/components/HeroCarousel3D'
 import { ChevronDown, Sparkles, Zap } from 'lucide-react'
 
 export default function HeroSection() {
@@ -39,7 +39,6 @@ export default function HeroSection() {
       ease: 'power3.out'
     }, '-=0.4')
 
-    // Floating animation for chevron
     gsap.to(chevronRef.current, {
       y: 10,
       duration: 2,
@@ -55,63 +54,61 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden neural-bg">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/80" />
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* 3D Carousel Background */}
+      {/* Increased opacity for more visibility */}
+      <div className="absolute inset-0 z-0 opacity-80">
+        <HeroCarousel3D />
+      </div>
+
+      {/* Background overlay */}
+      {/* Reduced opacity to make it more transparent */}
+      <div className="absolute inset-0 bg-background/50" />
       
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <div className="space-y-8">
-            <h1 
-              ref={titleRef}
-              className="text-5xl md:text-7xl font-bold leading-tight"
-              data-text="AI Robotics Club"
-            >
-              <span className="glitch-text" data-text="AI">AI</span>{' '}
-              <span className="bg-gradient-glow bg-clip-text text-transparent">
-                Robotics
-              </span>
-              <br />
-              <span className="text-primary">Club</span>
-            </h1>
-            
-            <p 
-              ref={subtitleRef}
-              className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto lg:mx-0"
-            >
-              Where artificial intelligence meets innovation. Join us in building the future, 
-              one intelligent robot at a time.
-            </p>
-            
-            <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="neural" size="lg" className="group">
-                <Sparkles className="mr-2 h-5 w-5 group-hover:animate-spin" />
-                Join Our Mission
-              </Button>
-              <Button variant="hologram" size="lg" className="group">
-                <Zap className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                Explore Projects
-              </Button>
-            </div>
-          </div>
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <div className="space-y-8">
+          <h1 
+            ref={titleRef}
+            className="text-5xl md:text-7xl font-bold leading-tight"
+            data-text="AI Robotics Club"
+          >
+            <span className="glitch-text" data-text="AI">AI</span>{' '}
+            <span className="bg-gradient-glow bg-clip-text text-transparent">
+              Robotics
+            </span>
+            <br />
+            <span className="text-primary">Club</span>
+          </h1>
           
-          {/* 3D AI Head */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-glow opacity-20 blur-3xl animate-glow-pulse" />
-            <AIHead3D />
+          <p 
+            ref={subtitleRef}
+            className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto"
+          >
+            Where artificial intelligence meets innovation. Join us in building the future, 
+            one intelligent robot at a time.
+          </p>
+          
+          <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="neural" size="lg" className="group">
+              <Sparkles className="mr-2 h-5 w-5 group-hover:animate-spin" />
+              Join Our Mission
+            </Button>
+            <Button variant="hologram" size="lg" className="group">
+              <Zap className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+              Explore Projects
+            </Button>
           </div>
         </div>
-        
-        {/* Scroll indicator */}
-        <div 
-          ref={chevronRef}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
-          onClick={scrollToNext}
-        >
-          <ChevronDown className="h-8 w-8 text-primary animate-bounce hover:text-hologram transition-colors" />
-        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div 
+        ref={chevronRef}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer z-10"
+        onClick={scrollToNext}
+      >
+        <ChevronDown className="h-8 w-8 text-primary animate-bounce hover:text-hologram transition-colors" />
       </div>
     </section>
   )

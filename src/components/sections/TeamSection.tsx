@@ -3,11 +3,11 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import teamPhotoImage from "@/assets/team-photo.jpg";
 
 // 1. Import your team member images here
-// import teamAditya from '@/assets/team-aditya.jpg'; // Replace with your actual image files
-// import teamSneha from '@/assets/team-sneha.jpg';
-// import teamPrasad from '@/assets/team-prasad.jpg';
-// import teamRitesh from '@/assets/team-ritesh.jpg';
-// import teamVirendra from '@/assets/team-virendra.jpg';
+import teamAditya from '@/assets/team-aditya.jpg'; // Replace with your actual image files
+import teamSneha from '@/assets/team-sneha.jpg';
+import teamPrasad from '@/assets/team-prasad.jpg';
+import teamRitesh from '@/assets/team-ritesh.jpg';
+import teamVirendra from '@/assets/team-virendra.jpg';
 import teamNilesh from '@/assets/team-nilesh.jpg';
 import teamPratik from '@/assets/team-pratik.jpg';
 import teamAshwin from '@/assets/team-ashwin.jpg';
@@ -18,7 +18,7 @@ const teamMembers = [
     name: "Aditya Jadhav",
     role: "AI Robo Club Lead",
     bio: "Specializing in Machine learning, deep learning and neural networks with 2+ years in AI research.",
-    //imageUrl: teamAditya, // 2. Use the imported image
+    imageUrl: teamAditya, // 2. Use the imported image
     github: "https://github.com/AdityaJ87",
     linkedin: "https://www.linkedin.com/in/aditya-jadhav87/",
     email: "mailto:adityajadhav18052004@gmail.com",
@@ -36,9 +36,9 @@ const teamMembers = [
   },
   {
     name: "Prasad Dhokane",
-    role: "Data Scientist ",
+    role: "Management Lead ",
     bio: "Expert in Data Analyst and Machine Learning.",
-    //imageUrl: teamPrasad,
+    imageUrl: teamPrasad,
     github: "https://github.com/prasad12379",
     linkedin: "https://www.linkedin.com/in/prasad-dhokane-58487728a/",
     email: "mailto:dhokaneprasad6@gmail.com",
@@ -58,7 +58,7 @@ const teamMembers = [
     name: "Virendrasinh Patil",
     role: "Gen AI Scientist ",
     bio: "Expert in ML, DL ,Lang-Chain, LLM and Transformers.",
-    //imageUrl: teamVirendra,
+    imageUrl: teamVirendra,
     github: "https://github.com/Virendra010",
     linkedin: "https://www.linkedin.com/in/virendrasinh-patil-476087317/",
     email: "mailto:patilvirendrasinh1000@gmail.com",
