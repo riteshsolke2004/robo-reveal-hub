@@ -1,85 +1,81 @@
-import { useRef, useState, Suspense } from 'react'
-import { Canvas, useFrame, useLoader } from '@react-three/fiber'
+import { useRef, useMemo, Suspense } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
-import aiHeroImage from '@/assets/ai-hero.jpg'
 
-function FloatingHead() {
-  const meshRef = useRef<THREE.Mesh>(null)
-  const [hovered, setHovered] = useState(false)
-  
-  // Load AI texture
-  const texture = useLoader(THREE.TextureLoader, aiHeroImage)
+function NeuralPlexus() {
+  const groupRef = useRef<THREE.Group>(null);
+  const particlesRef = useRef<THREE.Points>(null);
+
+  const { positions, connections } = useMemo(() => {
+    const particleCount = 200;
+    const positions = new Float32Array(particleCount * 3);
+    const connections = [];
+
+    for (let i = 0; i < particleCount; i++) {
+      // Create particles in a sphere
+      const theta = Math.random() * 2 * Math.PI;
+      const phi = Math.acos(2 * Math.random() - 1);
+      const r = 1.5 + Math.random() * 0.5;
+      positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+      positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+      positions[i * 3 + 2] = r * Math.cos(phi);
+    }
+
+    // Create connections
+    for (let i = 0; i < particleCount; i++) {
+      for (let j = i + 1; j < particleCount; j++) {
+        const dx = positions[i * 3] - positions[j * 3];
+        const dy = positions[i * 3 + 1] - positions[j * 3 + 1];
+        const dz = positions[i * 3 + 2] - positions[j * 3 + 2];
+        const distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+        if (distance < 0.8) {
+          connections.push(i, j);
+        }
+      }
+    }
+    return { positions, connections: new Uint16Array(connections) };
+  }, []);
 
   useFrame((state) => {
-    if (meshRef.current) {
-      // Floating animation
-      meshRef.current.position.y = Math.sin(state.clock.elapsedTime) * 0.3
-      meshRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.1
-      
-      // Mouse interaction
-      const mouse = state.mouse
-      meshRef.current.rotation.x = mouse.y * 0.1
-      meshRef.current.rotation.z = mouse.x * 0.1
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.001;
+      groupRef.current.rotation.x += 0.0005;
     }
-  })
+  });
 
   return (
-    <mesh
-      ref={meshRef}
-      scale={hovered ? 1.1 : 1}
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
-    >
-      <sphereGeometry args={[1, 32, 32]} />
-      <meshStandardMaterial
-        map={texture}
-        roughness={0.2}
-        metalness={0.6}
-        emissive="#001133"
-        emissiveIntensity={0.3}
-      />
-    </mesh>
-  )
-}
-
-function NeuralParticles() {
-  const points = useRef<THREE.Points>(null)
-  
-  const particleCount = 100
-  const positions = new Float32Array(particleCount * 3)
-  
-  for (let i = 0; i < particleCount; i++) {
-    positions[i * 3] = (Math.random() - 0.5) * 10
-    positions[i * 3 + 1] = (Math.random() - 0.5) * 10
-    positions[i * 3 + 2] = (Math.random() - 0.5) * 10
-  }
-
-  useFrame((state) => {
-    if (points.current) {
-      points.current.rotation.y = state.clock.elapsedTime * 0.1
-    }
-  })
-
-  return (
-    <points ref={points}>
-      <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          count={particleCount}
-          array={positions}
-          itemSize={3}
-        />
-      </bufferGeometry>
-      <pointsMaterial
-        size={0.05}
-        color="#00ffff"
-        transparent
-        opacity={0.6}
-        sizeAttenuation={true}
-      />
-    </points>
-  )
+    <group ref={groupRef}>
+      <points ref={particlesRef}>
+        <bufferGeometry>
+          <bufferAttribute
+            attach="attributes-position"
+            count={positions.length / 3}
+            array={positions}
+            itemSize={3}
+          />
+        </bufferGeometry>
+        <pointsMaterial size={0.03} color="#00d4ff" />
+      </points>
+      <lineSegments>
+        <bufferGeometry>
+          <bufferAttribute
+            attach="attributes-position"
+            count={positions.length / 3}
+            array={positions}
+            itemSize={3}
+          />
+          <bufferAttribute
+            attach="index"
+            count={connections.length}
+            array={connections}
+            itemSize={1}
+          />
+        </bufferGeometry>
+        <lineBasicMaterial color="#ff00ff" transparent opacity={0.1} />
+      </lineSegments>
+    </group>
+  );
 }
 
 function Scene() {
@@ -89,8 +85,7 @@ function Scene() {
       <pointLight position={[10, 10, 10]} intensity={1} color="#00d4ff" />
       <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ff00ff" />
       
-      <FloatingHead />
-      <NeuralParticles />
+      <NeuralPlexus />
       
       <OrbitControls
         enableZoom={false}

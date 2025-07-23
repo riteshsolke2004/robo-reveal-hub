@@ -4,6 +4,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 
+// 1. Import your mentor images here
+// import mentor1 from '@/assets/mentor-1.jpg'; // Replace with your actual image file
+// import mentor2 from '@/assets/mentor-2.jpg'; // Replace with your actual image file
+// import mentor3 from '@/assets/mentor-3.jpg'; // Replace with your actual image file
+
+
 gsap.registerPlugin(ScrollTrigger)
 
 const mentors = [
@@ -13,18 +19,18 @@ const mentors = [
     role: "Head Of Department",
     department: "Computer Engineering",
     expertise: ["Machine Learning", "Neural Networks", "Deep Learning"],
-    image: "",
+    //image: mentor1, // 2. Use the imported image
     bio: "Leading researcher in artificial intelligence with 15+ years of experience in ML and robotics integration.",
     contact: "s.chen@university.edu"
   },
 
   {
-    id: 2,
+    id: 3,
     name: "Prof. Minal Bade",
     role: "Club Coordinator",
     department: "Computer Engineering",
     expertise: ["AI Ethics","ML"],
-    image: "",
+   // image: mentor2, // 2. Use the imported image
     bio: "Pioneering work in responsible AI development and ethical considerations in robotics.",
     contact: "e.watson@university.edu"
   },
@@ -34,12 +40,11 @@ const mentors = [
     role: "Club Advisor",
     department: "Computer Engineering",
     expertise: ["Autonomous Systems", "Computer Vision", "AIML"],
-    image: "",
+   // image: mentor3, // 2. Use the imported image
     bio: "Industry veteran with expertise in autonomous robotics and real-world AI applications.",
     contact: "taneshdevhare07@gmail.com"
   },
-  
-  {
+    {
     id: 4,
     name: "Mr. Avishkar Bhusare",
     role: "Club Advisor",
@@ -47,7 +52,7 @@ const mentors = [
     expertise: ["Data Analyst","Machine learning"],
     image: "",
     bio: "Expert in robotics hardware design and rapid prototyping for AI-driven mechanical systems.",
-    contact: "j.liu@university.edu"
+    contact: "avishkarbhusare@gmail.com"
   }
 ]
 

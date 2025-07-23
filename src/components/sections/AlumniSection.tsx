@@ -4,25 +4,25 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 const alumni = [
   {
-    name: 'John Doe',
+    name: 'Amar Jejurkar',
     imageUrl: 'https://via.placeholder.com/150',
-    graduationYear: 2022,
-    clubRole: 'President',
-    currentRole: 'Software Engineer at Google',
+    graduationYear: 2023,
+    clubRole: 'Lead',
+    currentRole: 'Mastercard',
     linkedin: '#',
     github: '#',
     email: 'mailto:john.doe@example.com',
   },
-  {
-    name: 'Jane Smith',
+    {
+    name: 'Aditya Mansuk',
     imageUrl: 'https://via.placeholder.com/150',
-    graduationYear: 2021,
-    clubRole: 'Vice President',
-    currentRole: 'AI Researcher at OpenAI',
+    graduationYear: 2023,
+    clubRole: 'Co-lead',
+    currentRole: 'TCS Digital',
     linkedin: '#',
     github: '#',
     email: 'mailto:jane.smith@example.com',
-  },
+  }
 ];
 
 export default function AlumniSection() {

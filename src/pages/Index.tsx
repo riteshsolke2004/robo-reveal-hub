@@ -10,6 +10,7 @@ import TeamSection from '@/components/sections/TeamSection'
 import JoinSection from '@/components/sections/JoinSection'
 import ResourcesSection from '@/components/sections/ResourcesSection'
 import AlumniSection from '@/components/sections/AlumniSection'
+import GallerySection from '@/components/sections/GallerySection'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -44,6 +45,7 @@ const Index = () => {
               <a href="#team" className="hover:text-primary transition-colors">Team</a>
               <a href="#resources" className="hover:text-primary transition-colors">Resources</a>
               <a href="#alumni" className="hover:text-primary transition-colors">Alumni</a>
+              <a href="#gallery" className="hover:text-primary transition-colors">Gallery</a>
               <a href="#join" className="hover:text-primary transition-colors">Join</a>
             </div>
           </div>
@@ -60,6 +62,7 @@ const Index = () => {
       <TeamSection />
       <ResourcesSection />
       <AlumniSection />
+      <GallerySection />
       <JoinSection />
       
       {/* Footer */}
@@ -96,6 +99,7 @@ const Index = () => {
                 <li><a href="#team" className="hover:text-primary transition-colors">Team</a></li>
                 <li><a href="#resources" className="hover:text-primary transition-colors">Resources</a></li>
                 <li><a href="#alumni" className="hover:text-primary transition-colors">Alumni</a></li>
+                <li><a href="#gallery" className="hover:text-primary transition-colors">Gallery</a></li>
                 <li><a href="#join" className="hover:text-primary transition-colors">Join Us</a></li>
               </ul>
             </div>

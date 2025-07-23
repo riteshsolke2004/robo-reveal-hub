@@ -2,12 +2,23 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { Github, Linkedin, Mail } from "lucide-react";
 import teamPhotoImage from "@/assets/team-photo.jpg";
 
+// 1. Import your team member images here
+// import teamAditya from '@/assets/team-aditya.jpg'; // Replace with your actual image files
+// import teamSneha from '@/assets/team-sneha.jpg';
+// import teamPrasad from '@/assets/team-prasad.jpg';
+// import teamRitesh from '@/assets/team-ritesh.jpg';
+// import teamVirendra from '@/assets/team-virendra.jpg';
+import teamNilesh from '@/assets/team-nilesh.jpg';
+import teamPratik from '@/assets/team-pratik.jpg';
+import teamAshwin from '@/assets/team-ashwin.jpg';
+
+
 const teamMembers = [
   {
     name: "Aditya Jadhav",
     role: "AI Robo Club Lead",
     bio: "Specializing in Machine learning, deep learning and neural networks with 2+ years in AI research.",
-    avatar: "🤖",
+    //imageUrl: teamAditya, // 2. Use the imported image
     github: "https://github.com/AdityaJ87",
     linkedin: "https://www.linkedin.com/in/aditya-jadhav87/",
     email: "mailto:adityajadhav18052004@gmail.com",
@@ -17,7 +28,7 @@ const teamMembers = [
     name: "Sneha Jadhav",
     role: "AI Robo Club Co-lead",
     bio: "Expert in machine learning and robotic control with a passion for innovation.",
-    avatar: "🔬",
+   // imageUrl: teamSneha,
     github: "http://github.com/sneharameshjadhav-22",
     linkedin: "http://linkedin.com/in/sneha-jadhav-920724293",
     email: "mailto:sneharameshjadhav22@gmail.com",
@@ -27,7 +38,7 @@ const teamMembers = [
     name: "Prasad Dhokane",
     role: "Data Scientist ",
     bio: "Expert in Data Analyst and Machine Learning.",
-    avatar: "💻",
+    //imageUrl: teamPrasad,
     github: "https://github.com/prasad12379",
     linkedin: "https://www.linkedin.com/in/prasad-dhokane-58487728a/",
     email: "mailto:dhokaneprasad6@gmail.com",
@@ -37,7 +48,7 @@ const teamMembers = [
     name: "Ritesh Solke",
     role: "Web Developer",
     bio: "Full-stack developer focused on AI integration and scalable system design",
-    avatar: "📊",
+    //imageUrl: teamRitesh,
     github: "https://github.com/riteshsolke2004",
     linkedin: "https://www.linkedin.com/in/riteshsolke/",
     email: "mailto:riteshsolke12@gmail.com",
@@ -47,7 +58,7 @@ const teamMembers = [
     name: "Virendrasinh Patil",
     role: "Gen AI Scientist ",
     bio: "Expert in ML, DL ,Lang-Chain, LLM and Transformers.",
-    avatar: "💻",
+    //imageUrl: teamVirendra,
     github: "https://github.com/Virendra010",
     linkedin: "https://www.linkedin.com/in/virendrasinh-patil-476087317/",
     email: "mailto:patilvirendrasinh1000@gmail.com",
@@ -57,7 +68,7 @@ const teamMembers = [
     name: "Nilesh Dhole",
     role: "Gen Ai Scientist",
     bio: "Expert in machine learning, DL, Lang-Chain, LLM and Transformers. with a passion for innovation.",
-    avatar: "🔬",
+    imageUrl: teamNilesh,
     github: "https://github.com/riteshsolke2004",
     linkedin: "https://www.linkedin.com/in/riteshsolke/",
     email: "mailto:riteshsolke12@gmail.com",
@@ -67,7 +78,7 @@ const teamMembers = [
     name: "Pratik Harke",
     role: "Cyber Security",
     bio: "Expert in Ethical Hacking and Ai Research.",
-    avatar: "💻",
+    imageUrl: teamPratik,
     github: "https://github.com/PratikHarke ",
     linkedin: "https://www.linkedin.com/in/pratik-harke-b60782293/",
     email: "mailto:insanepratik09@gmail.com",
@@ -77,7 +88,7 @@ const teamMembers = [
     name: "Ashwin Patil",
     role: "Web Developer",
     bio: "Full-stack developer focused on AI integration and scalable system design",
-    avatar: "📊",
+    imageUrl: teamAshwin,
     github: "https://github.com/ashwinpatil-a",
     linkedin: "https://www.linkedin.com/in/ashwin-patil01/",
     email: "mailto:ashwinpatil1805@gmail.com",
@@ -145,9 +156,12 @@ export default function TeamSection() {
             >
               <div className="bg-gradient-card backdrop-blur-sm border border-border/50 rounded-2xl p-6 text-center hover:shadow-hologram transition-all duration-500 hover:scale-105 hover:border-primary/50">
                 <div className="mb-4">
-                  <div className="w-20 h-20 bg-gradient-glow rounded-full flex items-center justify-center text-4xl mx-auto mb-4 group-hover:animate-glow-pulse">
-                    {member.avatar}
-                  </div>
+                   {/* 3. Replaced emoji div with img tag */}
+                  <img 
+                    src={member.imageUrl}
+                    alt={member.name}
+                    className="w-20 h-20 rounded-full object-cover mx-auto mb-4 border-2 border-primary/30 group-hover:border-primary transition-colors"
+                  />
                   <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">
                     {member.name}
                   </h3>

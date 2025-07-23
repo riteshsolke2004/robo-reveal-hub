@@ -44,8 +44,7 @@ export default function MissionSection() {
             Our <span className="text-primary">Mission</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We believe in the transformative power of AI and robotics to solve humanity's greatest challenges. 
-            Our mission is to democratize access to cutting-edge technology and foster the next generation of innovators.
+            Aligned with the Department of Computer Engineering's vision to serve society, our mission is to develop computer professionals by providing quality education and assimilating academic, research, and entrepreneurship skills to accomplish real-world challenges in AI and robotics.
           </p>
         </ScrollReveal>
         

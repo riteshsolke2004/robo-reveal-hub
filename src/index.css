@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Vibrant Sunset Aurora Theme */
+    /* Vibrant Sunset Aurora Theme (Default Light Theme) */
     --background: 340 45% 8%;
     --foreground: 45 95% 92%;
 
@@ -80,34 +80,50 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Enhanced dark mode with cyberpunk elements */
-    --background: 230 60% 1%;
-    --foreground: 180 100% 98%;
+    /* New: Bio-Digital Green Theme */
+    --background: 150 50% 5%;
+    --foreground: 150 80% 95%;
 
-    --card: 230 50% 3%;
-    --card-foreground: 180 100% 98%;
+    --card: 150 40% 10%;
+    --card-foreground: 150 80% 95%;
 
-    --popover: 230 50% 3%;
-    --popover-foreground: 180 100% 98%;
+    --popover: 150 40% 10%;
+    --popover-foreground: 150 80% 95%;
 
-    --primary: 180 100% 70%;
-    --primary-foreground: 230 60% 1%;
+    --primary: 150 100% 45%; /* Vibrant Green */
+    --primary-foreground: 150 50% 5%;
 
-    --secondary: 280 100% 15%;
-    --secondary-foreground: 300 100% 95%;
+    --secondary: 160 50% 20%; /* Deeper Teal */
+    --secondary-foreground: 150 80% 95%;
 
-    --muted: 230 40% 5%;
-    --muted-foreground: 190 40% 70%;
+    --muted: 150 20% 15%;
+    --muted-foreground: 150 15% 60%;
 
-    --accent: 320 100% 75%;
-    --accent-foreground: 230 60% 1%;
+    --accent: 130 90% 55%; /* Bright Lime */
+    --accent-foreground: 130 50% 5%;
 
-    --destructive: 0 100% 70%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 80% 65%;
+    --destructive-foreground: 150 80% 95%;
 
-    --border: 230 40% 12%;
-    --input: 230 40% 8%;
-    --ring: 180 100% 70%;
+    --border: 150 30% 20%;
+    --input: 150 30% 15%;
+    --ring: 150 100% 45%;
+
+    /* Custom AI Theme Colors */
+    --neural-glow: hsl(var(--primary));
+    --hologram: hsl(var(--accent));
+    --cyber-mint: hsl(var(--primary));
+    
+    /* Gradients */
+    --gradient-neural: linear-gradient(135deg, hsl(var(--primary) / 0.15), hsl(var(--accent) / 0.15));
+    --gradient-glow: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card) / 0.9), hsl(160 40% 12% / 0.8));
+    
+    /* Shadows & Effects */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.4);
+    --shadow-neural: 0 15px 60px hsl(var(--primary) / 0.2);
+    --shadow-hologram: 0 0 80px hsl(var(--accent) / 0.5);
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -151,10 +167,9 @@ All colors MUST be HSL.
   /* Aurora Background Animation */
   .neural-bg {
     background: 
-      radial-gradient(circle at 20% 50%, hsl(35 95% 65% / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(330 85% 68% / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, hsl(15 90% 65% / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 60% 70%, hsl(280 70% 55% / 0.03) 0%, transparent 50%);
+      radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--accent) / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(var(--secondary) / 0.05) 0%, transparent 50%);
   }
 
   /* Floating Animation */
