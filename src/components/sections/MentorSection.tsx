@@ -19,7 +19,7 @@ const mentors = [
   },
 
   {
-    id: 3,
+    id: 2,
     name: "Prof. Minal Bade",
     role: "Club Coordinator",
     department: "Computer Engineering",
@@ -39,17 +39,16 @@ const mentors = [
     contact: "taneshdevhare07@gmail.com"
   },
   
-
-  // {
-  //   id: 4,
-  //   name: "Dr. James Liu",
-  //   role: "Innovation Lead",
-  //   department: "Mechanical Engineering",
-  //   expertise: ["Hardware Design", "Mechatronics", "3D Printing"],
-  //   image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-  //   bio: "Expert in robotics hardware design and rapid prototyping for AI-driven mechanical systems.",
-  //   contact: "j.liu@university.edu"
-  // }
+  {
+    id: 4,
+    name: "Mr. Avishkar Bhusare",
+    role: "Club Advisor",
+    department: "Computer Engineering",
+    expertise: ["Data Analyst","Machine learning"],
+    image: "",
+    bio: "Expert in robotics hardware design and rapid prototyping for AI-driven mechanical systems.",
+    contact: "j.liu@university.edu"
+  }
 ]
 
 const MentorSection = () => {

@@ -10,48 +10,54 @@ const projects = [
     description: 'The Smart Attendance System is an AI-powered application that automates attendance marking using real-time face recognition through webcams and mobile cameras. It is designed for educational institutions and organizations to ensure accurate, contactless, and tamper-proof attendance logging.',
     image: aiHeroImage,
     tags: ['OpenCV', 'Face Recognization', 'Real-time Processing'],
-    status: 'Active Development',
-    featured: true
+    status: 'Currently Working',
+    featured: true,
+    learnMoreLink: 'https://en.wikipedia.org/wiki/Attendance' // Added link
   },
   {
     title: 'Sentiment Analysis',
     description: 'The Sentiment Analysis project is an AI-powered system that automatically detects the emotional tone behind text data. It classifies input text (such as product reviews, social media comments, or customer feedback) into categories like positive, negative, or neutral using Natural Language Processing (NLP) techniques.',
     image: roboticsLabImage,
     tags: ['Data Scraping', 'LLM', 'Transformer'],
-    status: 'Beta Testing',
-    featured: true
+    status: 'Currently Working',
+    featured: true,
+    learnMoreLink: 'https://en.wikipedia.org/wiki/Sentiment_analysis' // Added link
   },
   {
     title: 'Computer Vision Robotic Arm',
     description: 'An intelligent robotic arm that uses a camera and AI to detect objects and perform tasks like picking and placing based on real-time image processing.',
     image: aiHeroImage,
     tags: ['Robotics', 'Kinematics', 'Control Systems'],
-    status: 'Research Phase',
-    featured: false
+    status: 'Completed',
+    featured: false,
+    learnMoreLink: 'https://en.wikipedia.org/wiki/Robotic_arm' // Added link
   },
   {
-    title: 'Robotic Arm Controller',
-    description: 'Precision control system for robotic arms with inverse kinematics and machine learning-based optimization.',
+    title: 'Smart Home Automation',
+    description: 'This Smart Home Automation project delivers convenience, energy efficiency, remote control, and improved accessibility by automating household devices, controllable via voice commands and mobile apps.',
     image: roboticsLabImage,
     tags: ['Robotics', 'Kinematics', 'Control Systems'],
     status: 'Completed',
-    featured: false
+    featured: false,
+    learnMoreLink: '' // Added link
   },
     {
-    title: 'Robotic Arm Controller',
-    description: 'Precision control system for robotic arms with inverse kinematics and machine learning-based optimization.',
+    title: 'Smart Irrigation System',
+    description: 'This "Smart Irrigation System" project automates watering based on environmental factors, controllable via a mobile app. It aims to optimize water usage for agricultural or garden applications, utilizing sensors and a control system.',
     image: roboticsLabImage,
-    tags: ['Robotics', 'Kinematics', 'Control Systems'],
+    tags: ['Smart Irrigation', 'IOT', 'AgriTech'],
     status: 'Completed',
-    featured: false
+    featured: false,
+    learnMoreLink: 'https://en.wikipedia.org/wiki/Irrigation' // Added link
   },
   {
-    title: 'Robotic Arm Controller',
-    description: 'Precision control system for robotic arms with inverse kinematics and machine learning-based optimization.',
+    title: 'Rover Robot',
+    description: 'This "Rover Robot" project develops versatile robots for scientific research, data collection, and solving real-world problems. Its applicable in diverse fields like search and rescue, agriculture, warehouse automation, and security.',
     image: roboticsLabImage,
-    tags: ['Robotics', 'Kinematics', 'Control Systems'],
+    tags: ['Robotics', 'Mobile App', 'Embedded Systems'],
     status: 'Completed',
-    featured: false
+    featured: false,
+    learnMoreLink: '/projects/robotic-arm-controller-3' // Added link
   }
 ]
 
@@ -128,10 +134,12 @@ export default function ProjectsSection() {
                       <Play className="h-4 w-4 mr-2 group-hover/btn:scale-110 transition-transform" />
                       Demo
                     </Button>
-                    <Button variant="ghost" size="sm" className="group/btn">
-                      <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:scale-110 transition-transform" />
-                      Details
-                    </Button>
+                    <a href={project.learnMoreLink}>
+                      <Button variant="ghost" size="sm" className="group/btn">
+                        <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:scale-110 transition-transform" />
+                        Details
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -187,10 +195,12 @@ export default function ProjectsSection() {
                     <Github className="h-3 w-3 mr-1" />
                     Code
                   </Button>
-                  <Button variant="ghost" size="sm" className="flex-1">
-                    <ExternalLink className="h-3 w-3 mr-1" />
-                    <a href = 'https://en.wikipedia.org/wiki/Robotic_arm'>Learn More</a>
-                  </Button>
+                  <a href={project.learnMoreLink} className="flex-1">
+                    <Button variant="ghost" size="sm" className="w-full">
+                      <ExternalLink className="h-3 w-3 mr-1" />
+                      Learn More
+                    </Button>
+                  </a>
                 </div>
               </div>
             </ScrollReveal>
