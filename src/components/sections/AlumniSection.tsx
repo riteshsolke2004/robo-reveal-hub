@@ -19,7 +19,7 @@ const alumni = [
   },
   {
     name: 'Aditya Mansuk',
-    //imageUrl: alumniAditya, // 2. Use the imported image
+    imageUrl: alumniAditya, // 2. Use the imported image
     graduationYear: 2023,
     clubRole: 'Co-lead',
     currentRole: 'TCS Digital',

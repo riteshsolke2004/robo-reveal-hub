@@ -19,21 +19,21 @@ const mentors = [
     name: "Dr. P.D. Lambhate",
     role: "Head Of Department",
     department: "Computer Engineering",
-    expertise: ["Machine Learning", "Neural Networks", "Deep Learning"],
-    //image: mentor1,
-    bio: "Leading researcher in artificial intelligence with 15+ years of experience in ML and robotics integration.",
-    contact: "s.chen@university.edu"
+    expertise: ["Ph.D in Computer Engineering"],
+    image: mentor1,
+    bio: "Ph.D. in Computer Engineering with over 26 years of teaching experience and 2 years of industrial experience, providing strong academic and practical guidance to students.",
+    contact: "head_compjscoe@jspmjscoe.edu.in"
   },
 
   {
-    id: 3,
-    name: "Prof. Minal Bade",
+    id: 2,
+    name: "Prof. Minal Powar",
     role: "Club Coordinator",
     department: "Computer Engineering",
-    expertise: ["AI Ethics","ML"],
-    //image: mentor2,
-    bio: "Pioneering work in responsible AI development and ethical considerations in robotics.",
-    contact: "e.watson@university.edu"
+    expertise: ["ME(Computer Engineering)"],
+    image: mentor2,
+    bio: "I am an Assistant Professor with a strong commitment to teaching, research, and academic service. I enjoy guiding students through both foundational and advanced topics, and I'm always looking to collaborate on interdisciplinary projects that address real-world challenges..",
+    contact: "minalpowar@jspmjscoe.edu.in"
   },
     {
     id: 3,
