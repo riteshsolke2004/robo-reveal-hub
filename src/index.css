@@ -252,3 +252,33 @@ All colors MUST be HSL.
     23% { transform: translate(2px, 0); }
   }
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... existing styles ... */
+
+@layer base {
+  /* ... existing styles ... */
+
+  /* Floating Animation for Developer Name */
+  @keyframes float-name {
+    0% {
+      transform: translateY(0px);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(-10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 0.7;
+    }
+  }
+
+  .floating-name {
+    animation: float-name 6s ease-in-out infinite;
+  }
+}

@@ -47,7 +47,7 @@ const teamMembers = [
   {
     name: "Ritesh Solke",
     role: "Web Developer",
-    bio: "Full-stack developer focused on AI integration and scalable system design",
+    bio: "Full Stack & AI/ML enthusiast Passionate about building smart tech solutions and exploring innovation.",
     imageUrl: teamRitesh,
     github: "https://github.com/riteshsolke2004",
     linkedin: "https://www.linkedin.com/in/riteshsolke/",

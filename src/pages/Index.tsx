@@ -120,7 +120,8 @@ const Index = () => {
                 <li><a href = "mailto:ai.club.jscoe@gmail.com">ai.club.jscoe@gmail.com</a></li>
                 <li>JSPM'S JSCOE Hadapsar</li>
                 <li>Pune, 411028</li>
-                <li>+91 98507 11406 , 87999 93086</li>
+                <li>+91 98507 11406</li>
+                <li>+91 87999 93086</li>
               </ul>
             </div>
           </div>

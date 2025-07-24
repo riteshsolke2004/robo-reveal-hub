@@ -122,7 +122,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               </ScrollReveal>
             ))}
             
-            <ScrollReveal animation="slideLeft" delay={0.8}>
+            {/* <ScrollReveal animation="slideLeft" delay={0.8}>
               <div className="bg-gradient-card backdrop-blur-sm border border-hologram/30 rounded-xl p-6">
                 <h4 className="text-lg font-semibold mb-3 text-hologram">
                   🚀 Special Launch Event
@@ -136,7 +136,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </div>
-            </ScrollReveal>
+            </ScrollReveal> */}
           </div>
           
           {/* Application Form */}
