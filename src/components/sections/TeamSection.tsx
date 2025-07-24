@@ -77,12 +77,12 @@ const teamMembers = [
   {
     name: "Pratik Harke",
     role: "Cyber Security",
-    bio: "Expert in Ethical Hacking and Ai Research.",
+    bio: "Expert in Ethical Hacking and Cyber Security.",
     imageUrl: teamPratik,
     github: "https://github.com/PratikHarke ",
     linkedin: "https://www.linkedin.com/in/pratik-harke-b60782293/",
     email: "mailto:insanepratik09@gmail.com",
-    skills: ["Cyber Security"],
+    skills: ["Cyber Security","Ko-sint","Bash Scripting"],
   },
   {
     name: "Ashwin Patil",
